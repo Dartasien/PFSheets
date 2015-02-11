@@ -352,6 +352,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Migrations\ConfigurationUser.cs" />
     <Compile Include="Models\AbilityScore.cs" />
     <Compile Include="Models\ArmorClass.cs" />
     <Compile Include="Models\Character.cs" />
@@ -361,7 +363,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Initiative.cs" />
     <Compile Include="Models\SavingThrow.cs" />
-    <Compile Include="Models\SheetContext.cs" />
+    <Compile Include="Models\SheetsContext.cs" />
     <Compile Include="Models\Speed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

@@ -5,11 +5,12 @@ using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Data.Entity;
 
+
 namespace PFSheets.Models
 {
-    public class SheetContext : DbContext
+    public class SheetsContext : DbContext
     {
-        public SheetContext() : base("PFSheets")
+        public SheetsContext() : base("PFSheets")
         {
         }
 
@@ -21,6 +22,6 @@ namespace PFSheets.Models
         public DbSet<ArmorClass> ArmorClasses { get; set; }
         public DbSet<HitPoints> HitPoints { get; set; }
         public DbSet<SavingThrow> SavingThrows { get; set; }
-        public DbSet<Users> Users { get; set; }
+        // public DbSet<Users> Users { get; set; }
     }
 }

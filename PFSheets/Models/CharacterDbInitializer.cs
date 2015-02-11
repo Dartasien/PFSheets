@@ -4,11 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
+
 namespace PFSheets.Models
 {
-    public class CharacterDbInitializer : DropCreateDatabaseAlways<SheetContext>
+    public class CharacterDbInitializer : DropCreateDatabaseIfModelChanges<SheetsContext>
     {
-        protected override void Seed(SheetContext context)
+        protected override void Seed(SheetsContext context)
         {
            getCharacter().ForEach(s => context.Characters.Add(s));
         

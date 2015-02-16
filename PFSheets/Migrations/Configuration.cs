@@ -29,15 +29,10 @@ namespace PFSheets.Migrations
             //
 
             context.Characters.AddOrUpdate(
-                new Character
-                {
-                    PlayerName = "Dart",
-                    CharID = 1,
-                    CharName = "Dartasien",
-
-                }
-                );
-
+                p => new {p.PlayerName, p.CharName },
+                    new Character { PlayerName = "Dart", CharName = "Dartasien"},
+                    new Character { PlayerName = "Chem", CharName = "dargon"}
+            );
         }
     }
 }

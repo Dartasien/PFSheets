@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
@@ -8,14 +9,14 @@ namespace PFSheets.Models
 {
     public class Character
     {
-        [Required, Key, StringLength(15)]
+        public int ID { get; set; }
+
+        [Required, StringLength(15)]
         public string PlayerName { get; set; }
 
         [Required, StringLength(15)]
         public string CharName { get; set; }
-
-        [Required, ScaffoldColumn(false)]
-        public int CharID { get; set; }
+        
 
         public string Race { get; set; }
 

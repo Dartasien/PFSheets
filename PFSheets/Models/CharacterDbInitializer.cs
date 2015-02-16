@@ -22,7 +22,6 @@ namespace PFSheets.Models
                 new Character
                 {
                     PlayerName = "Dart",
-                    CharID = 1,
                     CharName = "Dartasien",
 
                 }

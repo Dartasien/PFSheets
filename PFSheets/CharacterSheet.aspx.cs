@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+using PFSheets.Account;
 using PFSheets.Models;
 
 namespace PFSheets
 {
-    public partial class CharacterSheet : System.Web.UI.Page
+    public partial class CharacterSheet : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,10 +14,16 @@ namespace PFSheets
 
         protected void SaveBtn_OnClick(object sender, EventArgs e)
         {
+            //var id = GetId();
             CreateNewCharacter();
             AddClasses();
         }
-
+        /*
+        private object GetId()
+        {
+            var db = new ApplicationUser()
+        }
+        */
         private void AddClasses()
         {
             var level1 = GetLevels(1);

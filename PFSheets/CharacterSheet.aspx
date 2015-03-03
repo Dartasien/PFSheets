@@ -13,17 +13,17 @@
             <tbody>
                 <tr class="row">
                     <td><label for="charName">Character Name:</label></td>
-                    <td><input class="input-sm" name="charName" type="text" placeholder="ChemicalDragon"></td>
+                    <td><input class="input-sm" name="charName" type="text" placeholder="ChemicalDragon" required></td>
                 </tr>
                 <tr class="row">
                     <td><label for="playerName">Name:</label></td>
-                    <td><input class="input-sm" name="playerName" type="text"></td>
+                    <td><input class="input-sm" name="playerName" type="text" required></td>
                     <td><label>Race:</label></td>
-                    <td><input class="input-sm" name="race" type="text" placeholder="Human"/></td>
+                    <td><input class="input-sm" name="race" type="text" placeholder="Human"/ required></td>
                 </tr>
                 <tr class="row">
                     <td><label for="alignment">Alignment:</label></td>
-                    <td><input class="input-sm" name="alignment" type="text" placeholder="Lawful"></td>
+                    <td><input class="input-sm" name="alignment" type="text" placeholder="Lawful Good" required></td>
                     <td><label for="deity">Deity:</label></td>
                     <td><input class="input-sm" name="deity" type="text"></td>
                 </tr>
@@ -42,24 +42,24 @@
             <tbody>
                 <tr>
                     
-                    <td><input class="input-sm" name="class1" type="text"></td>
-                    <td><input class="input-sm" name="level1" type="number"></td>
+                    <td><input class="input-sm" name="class1" type="text" required></td>
+                    <td><input class="input-sm" name="level1" type="number" min="1" required></td>
                 </tr>
                  <tr>
                     <td><input class="input-sm" name="class2" type="text"></td>
-                    <td><input class="input-sm" name="level2" type="number"></td>
+                    <td><input class="input-sm" name="level2" type="number" min="0"></td>
                 </tr>
                  <tr>
                     <td><input class="input-sm" name="class3" type="text"></td>
-                    <td><input class="input-sm" name="level3" type="number"></td>
+                    <td><input class="input-sm" name="level3" type="number" min="0"></td>
                 </tr>
                  <tr>
                     <td><input class="input-sm" name="class4" type="text"></td>
-                    <td><input class="input-sm" name="level4" type="number"></td>
+                    <td><input class="input-sm" name="level4" type="number" min="0"></td>
                 </tr>
                 <tr>
                     <td><input class="input-sm" name="class5" type="text"></td>
-                    <td><input class="input-sm" name="level5" type="number"></td>
+                    <td><input class="input-sm" name="level5" type="number" min="0"></td>
             </tbody>
         </table>
     </section>

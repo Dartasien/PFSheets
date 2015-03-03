@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Web;
+using System.Web.Security;
 using System.Web.UI;
+using Microsoft.AspNet.Identity;
 using PFSheets.Account;
 using PFSheets.Models;
 
@@ -91,8 +94,9 @@ namespace PFSheets
                 CharName = Request.Form["charName"],
                 Alignment = Request.Form["alignment"],
                 Deity = Request.Form["deity"],
-                Race = RaceDropDownList.Items[RaceDropDownList.SelectedIndex].Text,
-                ID = 23
+                Race = Request.Form["race"],
+                UserID = HttpContext.Current.User.Identity.Name
+
             };
            
             var db = new SheetsContext();

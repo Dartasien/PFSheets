@@ -368,6 +368,18 @@
     <Compile Include="Migrations\201502162158506_add-levels.Designer.cs">
       <DependentUpon>201502162158506_add-levels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503031835187_FixingCharacter.cs" />
+    <Compile Include="Migrations\201503031835187_FixingCharacter.Designer.cs">
+      <DependentUpon>201503031835187_FixingCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503031933144_FixingCharacterAgain.cs" />
+    <Compile Include="Migrations\201503031933144_FixingCharacterAgain.Designer.cs">
+      <DependentUpon>201503031933144_FixingCharacterAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201503031934011_AddUserIDToChar.cs" />
+    <Compile Include="Migrations\201503031934011_AddUserIDToChar.Designer.cs">
+      <DependentUpon>201503031934011_AddUserIDToChar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\ConfigurationUser.cs" />
     <Compile Include="Models\AbilityScore.cs" />
@@ -411,6 +423,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201502162158506_add-levels.resx">
       <DependentUpon>201502162158506_add-levels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503031835187_FixingCharacter.resx">
+      <DependentUpon>201503031835187_FixingCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503031933144_FixingCharacterAgain.resx">
+      <DependentUpon>201503031933144_FixingCharacterAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503031934011_AddUserIDToChar.resx">
+      <DependentUpon>201503031934011_AddUserIDToChar.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

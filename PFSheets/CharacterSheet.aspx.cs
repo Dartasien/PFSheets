@@ -20,13 +20,34 @@ namespace PFSheets
         {
             var charId = CreateNewCharacter();
             AddClasses(charId);
+            AddInitiatives(charId);
         }
-        /*
-        private object GetId()
+
+        /// <summary>
+        /// Adds initiative for the newly created character.
+        /// </summary>
+        /// <param name="charId"></param>
+        private void AddInitiatives(int charId)
         {
-            var db = new ApplicationUser()
+            var initiative = new Initiative
+            {
+                DexMod = Convert.ToInt32(Request.Form["dexMod"]),
+                FeatMod = Convert.ToInt32(Request.Form["featMod"]),
+                RaceMod = Convert.ToInt32(Request.Form["raceMod"]),
+                MiscMod = Convert.ToInt32(Request.Form["miscMod"]),
+                //Total = Convert.ToInt32(Request.Form["totalMod"]),
+                Character = charId
+            };
+
+            var db = new SheetsContext();
+            db.Initiatives.Add(initiative);
+            db.SaveChanges();
         }
-        */
+
+        /// <summary>
+        /// Adds new classes for the newly created character.
+        /// </summary>
+        /// <param name="charId"></param>
         private void AddClasses(int charId)
         {
             var level1 = GetLevels(1);
@@ -55,6 +76,11 @@ namespace PFSheets
             db.SaveChanges();
         }
 
+        /// <summary>
+        /// Determine which level input is being used.
+        /// </summary>
+        /// <param name="numLevel"></param>
+        /// <returns>Value of the Character's Class Level</returns>
         private int GetLevels(int numLevel)
         {
             var formToRequest = "level";
@@ -86,6 +112,11 @@ namespace PFSheets
             return level;
         }
 
+
+        /// <summary>
+        /// Creates a new character in the database.
+        /// </summary>
+        /// <returns>ID of the character for use as foreign key in other tables</returns>
         private int CreateNewCharacter()
         {
             var character = new Character

@@ -107,8 +107,7 @@ namespace PFSheets
             var charId = from q in db.Characters
                          where q.CharName.Equals(character.CharName) && q.UserID.Equals(HttpContext.Current.User.Identity.Name)
                          select q.ID;
-            Response.Write(Convert.ToInt32(charId.FirstOrDefault()));
-            return Convert.ToInt32(charId.FirstOrDefault());
+            return Convert.ToInt32(charId.Max());
 
             
         }

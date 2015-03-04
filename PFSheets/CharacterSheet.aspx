@@ -65,16 +65,18 @@
     </section>
     <section id="initiativeSection">
         <h3>Initiative</h3>
-        <table>
+        <table class="table-condensed">
             <thead>
-                <th class="text-center">Dex Mod</th>
-                <th class="text-center">Feat Mod</th>
-                <th class="text-center">Race Mod</th>
-                <th class="text-center">Miscellaneous Mod</th>
-                <th class="text-center">Total</th>
+                <tr class="row">
+                    <th class="text-center">Dex Mod</th>
+                    <th class="text-center">Feat Mod</th>
+                    <th class="text-center">Race Mod</th>
+                    <th class="text-center">Miscellaneous Mod</th>
+                    <th class="text-center">Total</th>
+                </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="row">
                     <td><input class="input-sm" type="number" name="dexMod"/></td>
                     <td><input class="input-sm" type="number" name="featMod"/></td>
                     <td><input class="input-sm" type="number" name="raceMod"/></td>

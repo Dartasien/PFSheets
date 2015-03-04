@@ -63,6 +63,27 @@
             </tbody>
         </table>
     </section>
+    <section id="initiativeSection">
+        <h3>Initiative</h3>
+        <table>
+            <thead>
+                <th class="text-center">Dex Mod</th>
+                <th class="text-center">Feat Mod</th>
+                <th class="text-center">Race Mod</th>
+                <th class="text-center">Miscellaneous Mod</th>
+                <th class="text-center">Total</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="input-sm" type="number" name="dexMod"/></td>
+                    <td><input class="input-sm" type="number" name="featMod"/></td>
+                    <td><input class="input-sm" type="number" name="raceMod"/></td>
+                    <td><input class="input-sm" type="number" name="miscMod"/></td>
+                    <td><input class="input-sm" type="number" name="totalMod"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
     <asp:Button runat="server" CssClass="btn-primary text-right" ID="SaveBtn" Text="Save" OnClick="SaveBtn_OnClick"/>
     <h4><%: Title %></h4>
 </asp:Content>

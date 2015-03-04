@@ -7,18 +7,18 @@ namespace PFSheets.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.1-30610")]
-    public sealed partial class AddUserIDToChar : IMigrationMetadata
+    public sealed partial class AddNewForeignCharacterKey : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddUserIDToChar));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddNewForeignCharacterKey));
         
         string IMigrationMetadata.Id
         {
-            get { return "201503031934011_AddUserIDToChar"; }
+            get { return "201503041133593_AddNewForeignCharacterKey"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return null; }
+            get { return Resources.GetString("Source"); }
         }
         
         string IMigrationMetadata.Target

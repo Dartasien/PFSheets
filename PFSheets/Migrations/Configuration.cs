@@ -1,6 +1,5 @@
 namespace PFSheets.Migrations
 {
-    using PFSheets.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -27,12 +26,6 @@ namespace PFSheets.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-
-            context.Characters.AddOrUpdate(
-                p => new {p.PlayerName, p.CharName },
-                    new Character { PlayerName = "Dart", CharName = "Dartasien"},
-                    new Character { PlayerName = "Chem", CharName = "dargon"}
-            );
         }
     }
 }

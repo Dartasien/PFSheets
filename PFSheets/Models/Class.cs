@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
@@ -10,6 +11,8 @@ namespace PFSheets.Models
     {
         [Required, Key, ScaffoldColumn(false)]
         public int CharID { get; set; }
+
+        public int Character { get; set; }
 
         public string Class1 { get; set; }
 

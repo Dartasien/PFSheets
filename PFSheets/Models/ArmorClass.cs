@@ -14,6 +14,8 @@ namespace PFSheets.Models
         [ScaffoldColumn(false)]
         public int CharID { get; set; }
 
+        public int Character { get; set; }
+
         public string Type { get; set; }
 
         public int ArmorBonus { get; set; }

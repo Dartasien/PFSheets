@@ -11,6 +11,8 @@ namespace PFSheets.Models
         [Required, Key, ScaffoldColumn(false)]
         public int CharID { get; set; }
 
+        public int Character { get; set; }
+
         public int TotalHp { get; set; }
 
         public int DamageReduction { get; set; }

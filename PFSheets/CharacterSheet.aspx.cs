@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.UI;
@@ -17,9 +18,8 @@ namespace PFSheets
 
         protected void SaveBtn_OnClick(object sender, EventArgs e)
         {
-            //var id = GetId();
-            CreateNewCharacter();
-            AddClasses();
+            var charId = CreateNewCharacter();
+            AddClasses(charId);
         }
         /*
         private object GetId()
@@ -27,14 +27,14 @@ namespace PFSheets
             var db = new ApplicationUser()
         }
         */
-        private void AddClasses()
+        private void AddClasses(int charId)
         {
             var level1 = GetLevels(1);
             var level2 = GetLevels(2);
             var level3 = GetLevels(3);
             var level4 = GetLevels(4);
             var level5 = GetLevels(5);
-            
+           
             var classes = new Class
             {
                 Class1 = Request.Form["class1"],
@@ -46,9 +46,10 @@ namespace PFSheets
                 Class4 = Request.Form["class4"],
                 Level4 = level4,
                 Class5 = Request.Form["class5"],
-                Level5 = level5
+                Level5 = level5,
+                Character = charId
             };
-
+            
             var db = new SheetsContext();
             db.Classes.Add(classes);
             db.SaveChanges();
@@ -85,7 +86,7 @@ namespace PFSheets
             return level;
         }
 
-        private void CreateNewCharacter()
+        private int CreateNewCharacter()
         {
             var character = new Character
             {
@@ -102,6 +103,13 @@ namespace PFSheets
             var db = new SheetsContext();
             db.Characters.Add(character);
             db.SaveChanges();
+
+            var charId = from q in db.Characters
+                         where q.CharName.Equals(character.CharName) && q.UserID.Equals(HttpContext.Current.User.Identity.Name)
+                         select q.ID;
+            Response.Write(Convert.ToInt32(charId.FirstOrDefault()));
+            return Convert.ToInt32(charId.FirstOrDefault());
+
             
         }
     }

@@ -9,7 +9,7 @@ using PFSheets.Models;
 
 namespace PFSheets
 {
-    public partial class CharacterSheet : Page
+    public partial class CreateNewCharacter : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,7 +18,7 @@ namespace PFSheets
 
         protected void SaveBtn_OnClick(object sender, EventArgs e)
         {
-            var charId = CreateNewCharacter();
+            var charId = CreateNewChar();
             AddClasses(charId);
             AddInitiatives(charId);
         }
@@ -117,7 +117,7 @@ namespace PFSheets
         /// Creates a new character in the database.
         /// </summary>
         /// <returns>ID of the character for use as foreign key in other tables</returns>
-        private int CreateNewCharacter()
+        private int CreateNewChar()
         {
             var character = new Character
             {

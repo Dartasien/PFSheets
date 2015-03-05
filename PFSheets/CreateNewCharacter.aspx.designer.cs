@@ -10,7 +10,7 @@
 namespace PFSheets {
     
     
-    public partial class CharacterSheet {
+    public partial class CreateNewCharacter {
         
         /// <summary>
         /// totalMod control.

@@ -68,7 +68,10 @@ namespace PFSheets
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                CreateNewCharLink.Visible = true;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

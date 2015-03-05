@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Character Sheet" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CharacterSheet.aspx.cs" Inherits="PFSheets.CharacterSheet" %>
+﻿<%@ Page Title="Character Sheet" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CreateNewCharacter.aspx.cs" Inherits="PFSheets.CreateNewCharacter" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
     <script type="text/javascript">

@@ -161,7 +161,7 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
-    <Content Include="CreateNewCharacter.aspx" />
+    <Content Include="User Pages\CreateNewCharacter.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-original.css" />
     <Content Include="Content\bootstrap.css" />
@@ -216,6 +216,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="User Pages\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -340,11 +341,11 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="CreateNewCharacter.aspx.cs">
+    <Compile Include="User Pages\CreateNewCharacter.aspx.cs">
       <DependentUpon>CreateNewCharacter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CreateNewCharacter.aspx.designer.cs">
+    <Compile Include="User Pages\CreateNewCharacter.aspx.designer.cs">
       <DependentUpon>CreateNewCharacter.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
